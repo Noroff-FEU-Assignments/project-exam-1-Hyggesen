@@ -9,7 +9,7 @@ const embed ="/?_embed"
 
 const article = `${url}${id}`;
 
-console.log(article);
+const breadcrumb = document.querySelector(".back-button");
 async function getBlogposts () {
 
 try {
@@ -36,12 +36,22 @@ getBlogposts ();
 
 function createArticle (blogpost) {
 
-    console.log(blogpost.content.rendered);
+    const formatDate = new Date(blogpost.date).toLocaleString("en-GB", {
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+    });
         articleContainer.innerHTML = `
-        <img class="article-image" src="${blogpost._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url}" alt="">
         <h1 class="article-header">${blogpost.title.rendered}</h1>
-        <p class="article-intro">${blogpost.excerpt.rendered}</p>
-        <p class="article-text">${blogpost.content.rendered}</p>
+        <img class="article-image" src="${blogpost._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url}" alt="">
+        <div class="article-info">By:&nbsp;${blogpost._embedded.author[0].name}<span>&nbsp;${formatDate}</span></div>
+        <div class="article-intro">${blogpost.excerpt.rendered}</div>
+        <div class="article-text">${blogpost.content.rendered}</div>
         `
+
+        breadcrumb.innerHTML= `
+        <a href="/index.html">Home&nbsp;</a>/&nbsp; <a href="/blogposts.html">Blogposts&nbsp;</a>/<span>&nbsp; ${blogpost.title.rendered}</span>
+`
 } 
+
 

@@ -27,7 +27,7 @@ body {
 }
 
 main {
-    top: 80px;
+    top: 81.2px;
     position: relative;
     background-image: url(/assets/background-image-dark.webp);
     animation-duration: 10s;
@@ -66,7 +66,9 @@ main {
 .loader-wrapper {
     width: 100%;
     height: 100vh;
-    z-index: 999;
+    z-index: 999999;
+    position: absolute;
+    top: -1%;
     background-color: black;
     display:flex;
     justify-content: center;
@@ -83,7 +85,7 @@ main {
     position: absolute;
     top: 300px;
     display:flex;
-
+    z-index: 999999;
   }
   @keyframes spin {
     0% {
@@ -103,29 +105,62 @@ nav {
     width: 100%;
     max-width:100%;
     justify-content: space-around;
-    padding-top: 15px;
-    padding-bottom: 15px;
     position: fixed;
     margin: auto;
     z-index: 999;
     top: 0;
 }
 
+nav label {
+    margin: 0 40px 0 0 ;
+    font-size: 26px;
+    line-height: 70px;
+    color: var(--main-color);
+    padding-right: 15px;
+    display:none;
+}
 
-.logo a{
+#toggle {
+    display:none;
+}
+
+nav label:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.logo, .navlogo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navlogo {
+    flex:1;
+}
+
+.logo a, .navlogo a{
     font-size: 30px;
     text-decoration: none;
     text-transform: lowercase;
     color:white;
 }
 
-.logo span{
+.logo span, .navlogo span{
     color: var(--main-color)
 }
 
-.navbar ul {
+.navbar {
+    text-align: right;
+    height: 81.2px;
+    flex: 1;
+}
+
+.menu {
     list-style-type: none;
     display: flex;
+    margin: 0 30px 0 0;
+
 }
 
 .navbar a {
@@ -133,8 +168,9 @@ nav {
     text-transform: uppercase;
     text-decoration: none;
     color:white;
-    margin: 10px;
+    margin: 0 10px;
     padding: 10px 20px;
+    line-height: 70px;
 }
 
 .navbar a:hover {
@@ -350,14 +386,31 @@ nav {
 
 }
 
-.card {
+.card, .featuredCard {
     color:rgb(255, 255, 255);
     max-width: 250px;
-    height: 380px;
     display:flex;
     flex-direction: column;
+    
+    
+    
+}
+
+.featuredCard {
+    margin: 0px 20px;
+}
+
+.featuredCard img {
+    filter: grayscale();
+}
+
+.featuredCard:hover {
+    filter:none;
+}
+
+.card {
+    height: 380px;
     margin: 20px 20px 60px 20px;
-    padding: 15px;    
 }
 
 .card-button:hover {
@@ -373,12 +426,7 @@ nav {
     position: relative;
 }
 
-.card p {
-    height: 80px;
-    margin-top: 5px;
-    font-weight: 200;
-    font-size:13px;
-}
+
 
 
 
@@ -404,21 +452,34 @@ nav {
     background-color: var(--main-color);
 }
 
-.card-h2 {
+.card-h2{
     height: 40px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 10px;
-    margin-bottom: 10px;
+
 }
+
+.date {
+    color:var(--hover-main);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
 
 .card-p {
-    margin: 0px 0px 20px 0px;
+    height: 80px;
+    margin: 0px;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 13px;
+    color:#bbbbbb
 }
 
+.card p {
+    margin:0;
+}
 .card-button {
     color: black;
     background-color: var(--main-color);
@@ -451,26 +512,115 @@ nav {
 
 .content-wrapper {
     display:flex;
-    max-width: 1500px;
+    flex-direction: column;
+    max-width: 100%;
     justify-content: center;
-    margin-top: 50px;
+    align-items: center;
+    background-color: white;
+    color:black;
+    padding-bottom: 100px;
+
+}
+
+.back-button {
+display:flex;
+width: 800px;
+margin: 30px 0px 20px 0px;
+font-size: 12px;
+text-transform: uppercase;
+}
+
+.back-button span {
+    color:var(--hover-main);
+}
+
+.back-button a{
+    color:black;
+    text-decoration: none;
+}
+
+.back-button a:hover {
+    color:#bbbbbb;
+    cursor:pointer;
 }
 
 .article-container {
-    width: 600px;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-info {
+    width: 800px;
+    display:flex;
+    justify-content: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.article-info span {
+    color: var(--hover-main);
 }
 
 .article-image {
-    width:100%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .article-header {
-    font-weight: 600;
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 800px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbbbbb;
 }
 
-.article-intro {
-    color: red;
+.article-intro, .article-text {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    width: 100%;
+    max-width: 800px;
+    
+}
+
+.article-text {
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.article-intro { 
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.featured-wrapper {
+    width: 100%;
+    height: 400px;
+    background-color: #161616;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-h2, .latestposts-h2 {
+    margin-bottom: 40px;
+    margin-top: 0;
+    color:var(--main-color);
+    font-weight: 300;
+}
+.featured-h2 span, .latestposts-h2 span {
+    color: white;
+}
+
+.featured-container {
+    display:flex;
+
 }
 
 
@@ -597,12 +747,12 @@ margin-bottom: 15px;
 .about-hero h2 {
     color:var(--main-color);
     font-size: 30px;
-    margin-right: 50px;
+    margin: 0 30px 0 30px;
     width: 420px;
 }
 
 .about-hero p {
-    margin-right: 50px;
+    margin: 0 30px 0 30px;
    font-size: 20px;
    width: 420px;
    line-height: 1.5;
@@ -754,4 +904,43 @@ footer input {
     font-size: 14px;
     margin-bottom: 3px;
     margin-top: 3px;
+  }
+
+
+
+  @media only screen and (max-width:892px) {
+
+
+    nav label {
+        display:block;
+        width: 100%;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        background-color: #161616;
+        padding: 0;
+        display:none;
+        height: 100vh;
+    }
+
+    .menu li {
+        border-bottom: lightgray;
+    }
+    .menu a {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid rgb(48, 48, 48);
+    }
+
+
+   
+
+    #toggle:checked + .menu {
+        display:block;
+    }
+
+
+
   }

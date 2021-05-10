@@ -12,12 +12,15 @@
 </head>
 <body>
 <section class="home-wrapper">
-    <nav >
-        <div class="logo">
-            <a href="/index.html"><span>crypto</span>kings </a>
+    <nav>
+        <div class="navlogo">
+          <a href="/index.html"><span>crypto</span>kings </a>
+            
         </div>
         <div class="navbar">
-            <ul>
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <ul class="menu">
                 <li> <a href="/about.html">about</a></li>
                 <li> <a href="/contact.html">contact</a></li>
                 <li> <a href="/blogposts.html"><span>blogposts</span></a></li>
@@ -35,7 +38,7 @@
 </section>
 
 <section class="latest-posts" id="sp">
-    <h2>Latest posts</h2>
+    <h2 class="latestposts-h2">Latest <span>posts</span></h2>
     <div class="latest-posts-wrapper"></div>
     <div class="button-wrapper">
         <div class="previous"><img src="/assets/left-arrow.png" alt=""></div>
@@ -80,6 +83,6 @@
     </div>
 </footer>
 <script src="/js/scroll.js"></script>
-<script src="carousel.js"></script>
+<script src="/js/carousel.js"></script>
 </body>
 </html>

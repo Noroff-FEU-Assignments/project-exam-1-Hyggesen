@@ -6,7 +6,7 @@ const abouth1 = document.querySelector("about-h1");
 window.onscroll = function() {backgroundBlack()};
 
 function backgroundBlack() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
 navbar.style.backgroundColor="black";
   } else {
     navbar.style.backgroundColor= null;
