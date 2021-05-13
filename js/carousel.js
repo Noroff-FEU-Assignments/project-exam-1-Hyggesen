@@ -26,6 +26,7 @@ catch (error) {
 getBlogposts ();
 
 
+let page = 0;
 
 
 function createHtml (blogposts) {
@@ -50,9 +51,6 @@ for (i = 0; i<page+4; i++) {
 
     
 }
-
-
-
 
 next.addEventListener('click', ()=> {
 
@@ -110,8 +108,3 @@ previous.addEventListener('click', ()=> {
 
 
 }
-
-
-
-  
-
