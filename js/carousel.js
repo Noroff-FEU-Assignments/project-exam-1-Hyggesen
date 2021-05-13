@@ -26,10 +26,11 @@ catch (error) {
 getBlogposts ();
 
 
-let page = 0;
 
 
 function createHtml (blogposts) {
+
+
 for (i = 0; i<page+4; i++) {
     const formatDate = new Date(blogposts[i].date).toLocaleString("en-GB", {
         day: "numeric",
@@ -49,6 +50,9 @@ for (i = 0; i<page+4; i++) {
 
     
 }
+
+
+
 
 next.addEventListener('click', ()=> {
 
@@ -106,3 +110,8 @@ previous.addEventListener('click', ()=> {
 
 
 }
+
+
+
+  
+

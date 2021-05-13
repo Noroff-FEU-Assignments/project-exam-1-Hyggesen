@@ -137,6 +137,7 @@ nav label:hover {
 
 .navlogo {
     flex:1;
+    margin-left: 10px;
 }
 
 .logo a, .navlogo a{
@@ -224,16 +225,24 @@ nav label:hover {
     background-color: var(--hover-main);
  }
 
- .button-wrapper {
-     position: absolute;
-     width: 90%;
+ .buttons-and-content {
      display:flex;
-     justify-content: space-between;
+     align-items: center;
  }
 
- .button-wrapper img {
-     height: 20px;
+ .previous img, .next img {
+     height:20px;
+     width:20px;
  }
+
+.previous {
+    margin-right: 10px;
+}
+
+.next {
+    margin-left: 10px;
+}
+
 
 
 /* Welcome-screen styles */
@@ -411,6 +420,7 @@ nav label:hover {
 .card {
     height: 380px;
     margin: 20px 20px 60px 20px;
+
 }
 
 .card-button:hover {
@@ -553,7 +563,8 @@ text-transform: uppercase;
 }
 
 .article-info {
-    width: 800px;
+    width:100%;
+    max-width: 800px;
     display:flex;
     justify-content: left;
     margin-top: 10px;
@@ -639,18 +650,18 @@ text-transform: uppercase;
 }
 
 @keyframes jump {
-    0% { transform: translate(-20%, -50%) scale(1.1, 0.85); }
-    50% { transform: translate(-20%, -120%) }
-    55% { transform: translate(-20%, -120%) }
-    60% { transform: translate(-20%, -120%)  }
-    65% { transform: translate(-20%, -120%) }
-    70% { transform: translate(-20%, -120%)  }
-    100% { transform: translate(-20%, -50%) scale(1.1, 0.85); }
+    0% { transform: translate(-5%, -50%) scale(1.1, 0.85); }
+    50% { transform: translate(-5%, -120%) }
+    55% { transform: translate(-5%, -120%) }
+    60% { transform: translate(-5%, -120%)  }
+    65% { transform: translate(-5%, -120%) }
+    70% { transform: translate(-5%, -120%)  }
+    100% { transform: translate(-5%, -50%) scale(1.1, 0.85); }
 }
 
 .arrow-down {
     margin-top: 100px;
-    width: 65px;
+    padding:30px;
     animation-name: jump;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -678,13 +689,15 @@ text-transform: uppercase;
 }
 
 .selling-point {
-    width: 300px;
+    max-width: 300px;
+    width:100%;
     height: 300px;
     background-color: white;
     display:flex;
     margin: 20px;
     flex-direction: column;
     align-items: center;
+    flex:1;
     justify-content: center;
     box-shadow: 5px 5px 5px 1px black;
 }
@@ -908,7 +921,61 @@ footer input {
 
 
 
-  @media only screen and (max-width:892px) {
+  @media only screen and (max-width:1010px) {
+
+    .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
+      max-width: 700px;
+      width: 100%;
+    }
+
+
+    .about-hero {
+        height:350px;
+    }
+
+    .about-hero h2 {
+        font-size: 25px;
+        max-width: 300px;
+    }
+
+    .about-hero p {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    .header-container p, .about-p{
+        max-width: 700px;
+        text-align: center;
+
+    }
+
+
+    .buttons-and-content {
+        position: relative;
+    }
+
+    .previous {
+        position: absolute;
+        z-index: 9; 
+        top: 1820px;
+        left: 5px;
+    }
+
+    .next {
+        position:absolute; 
+        right: 5px;
+        top: 1820px;
+        z-index: 9;
+    }
+
+
+.latest-posts {
+    height: 2000px;
+}
+
+.latest-posts-wrapper {
+    flex-direction: column;
+}
 
 
     nav label {
@@ -934,13 +1001,235 @@ footer input {
         border-bottom: 1px solid rgb(48, 48, 48);
     }
 
-
-   
-
     #toggle:checked + .menu {
         display:block;
     }
 
 
+    .welcome-text h1 {
+        font-size: 40px;
+    }
+
+    @keyframes heading {
+        0%   { left:0px; top:0px;}
+        50%  {left:70px; top:0px;}
+        100% {left:0px; top:0px;}
+    }
+   
+    .welcome-text h1 span {
+        font-size: 50px;
+    }
+
+
+    @keyframes jump {
+        0% { transform: translate(5%, -70%) scale(1.1, 0.85); }
+        50% { transform: translate(5%, -110%) }
+        100% { transform: translate(5%, -70%) scale(1.1, 0.85); }
+    }
+
+
 
   }
+
+  @media only screen and (max-width:768px) {
+
+    .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
+        max-width: 600px;
+      }
+
+    .header-container p, .about-p{
+        max-width: 600px;
+    }
+
+    .form-section {
+        display: flex;
+        padding-bottom: 80px;
+
+    }
+
+    .formitem {
+        width: 90%;
+        align-self: center;
+    }
+
+    .formitem label {
+        font-size: 13px;
+    }
+
+    .formbutton {
+        max-width: 300px;
+        align-self: center;
+    }
+
+
+    .header-container h1, .about-h1{
+        font-size: 40px;
+    }
+
+
+    .header-container p, .about-p{
+        max-width: 500px;
+    }
+
+    .welcome-text h1 {
+        font-size: 30px;
+    }
+
+    @keyframes heading {
+        0%   { left:0px; top:0px;}
+        50%  {left:60px; top:0px;}
+        100% {left:0px; top:0px;}
+    }
+   
+    .welcome-text h1 span {
+        font-size: 40px;
+    }
+
+
+  }
+
+
+  @media only screen and (max-width:637px) {
+
+
+
+    .featured-wrapper {
+        height: 1200px;
+    }
+
+    .featured-container {
+        flex-direction: column;
+    }
+
+    .featuredCard {
+        margin: 20px 0 20px 0;
+    }
+
+    .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
+        max-width: 450px;
+      }
+
+    .about-hero {
+       flex-direction: column;
+       align-items: center;
+       height: 450px;
+    }
+
+    .about-hero h2 {
+        margin-bottom: 10px;
+    }
+
+    .about-hero p {
+        margin: 5px 0 5px 0;
+    }
+    .about-hero-item {
+        margin-top: 50px;
+    }
+    .picture1, .picture2, .picture3 {
+        margin: 20px 0 50px 0;
+        max-width: 300px;
+        width: 100%;
+    
+    }
+
+    .item-last {
+        order:1;
+    }
+
+
+    .selling-point-wrapper {
+        flex-direction: column;
+        height: 1100px;
+    }
+
+    .selling-point {
+        margin:20px;
+        flex:none;
+    }
+
+    .header-container p {
+        max-width: 600px;
+        font-size: 14px;
+    }
+    
+
+    .subscribe-banner h3 {
+        font-size: 30px;
+    }
+
+    .subscribe-banner p {
+        max-width: 400px;
+    }
+    .subscribe-email-input {
+        max-width: 400px;
+    }
+
+
+    footer {
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .welcome-text h1 {
+        font-size: 25px;
+    }
+
+    @keyframes heading {
+        0%   { left:0px; top:0px;}
+        50%  {left:40px; top:0px;}
+        100% {left:0px; top:0px;}
+    }
+   
+    .welcome-text h1 span {
+        font-size: 30px;
+    }
+
+}
+
+
+
+@media only screen and (max-width:480px) {
+
+    .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
+        max-width: 350px;
+      }
+
+      .article-header {
+          font-size: 30px;
+      }
+
+    .formbutton {
+        max-width: 200px;
+    }
+    .welcome-text h1 {
+        font-size: 20px;
+    }
+
+    @keyframes heading {
+        0%   { left:0px; top:0px;}
+        50%  {left:20px; top:0px;}
+        100% {left:0px; top:0px;}
+    }
+   
+    .welcome-text h1 span {
+        font-size: 22px;
+    }
+
+
+    .subscribe-banner h3 {
+        font-size: 25px;
+    }
+
+    .subscribe-banner p {
+        max-width: 300px;
+    }
+    .subscribe-email-input {
+        max-width: 300px;
+    }
+
+    .header-container p, .about-p{
+        margin: 10px;
+
+    }
+
+}
