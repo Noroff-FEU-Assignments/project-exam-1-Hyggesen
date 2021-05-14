@@ -923,6 +923,13 @@ footer input {
 
   @media only screen and (max-width:1010px) {
 
+
+    .welcome-text h1::before {
+        height: 35px;
+        width: 7px;
+
+    }
+
     .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
       max-width: 700px;
       width: 100%;
@@ -1033,6 +1040,12 @@ footer input {
 
   @media only screen and (max-width:768px) {
 
+    .welcome-text h1::before {
+        height: 30px;
+        width: 5px;
+        top: 5px;
+    }
+
     .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
         max-width: 600px;
       }
@@ -1090,6 +1103,13 @@ footer input {
 
 
   @media only screen and (max-width:637px) {
+
+    .welcome-text h1::before {
+        height: 25px;
+        width: 5px;
+        top: 2px;
+        left: -17px;
+    }
 
     .navlogo {
         margin:0px;
@@ -1200,6 +1220,12 @@ footer input {
 
 
 @media only screen and (max-width:480px) {
+
+    .welcome-text h1::before {
+        height: 20px;
+        width: 5px;
+        top: 3px;
+    }
 
     .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
         max-width: 350px;
