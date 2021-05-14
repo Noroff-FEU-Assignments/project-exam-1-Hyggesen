@@ -75,11 +75,11 @@ main {
 }
 
 .loader {
-    border: 25px solid white; /* Light grey */
-    border-top: 25px solid var(--main-color); /* Blue */
+    border: 15px solid white; /* Light grey */
+    border-top: 15px solid var(--main-color); /* Blue */
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     animation: spin 1s linear infinite;
     display: flex;
     position: absolute;
@@ -1091,6 +1091,17 @@ footer input {
 
   @media only screen and (max-width:637px) {
 
+    .navlogo {
+        margin:0px;
+    }
+
+    .navlogo a {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        padding:0;
+    }
 
 
     .featured-wrapper {
