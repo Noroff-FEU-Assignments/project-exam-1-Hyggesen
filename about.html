@@ -36,47 +36,45 @@
             </div>
         </nav>
  
-    <div class="welcome-screen">
-        <h1 class="about-h1">About</h1>
-        <p class="about-p">"Step by step, we became the number one blog for crypto-news in 2021"</p>
-        <img src="/assets/down-arrow.png" class="arrow-down" alt="" onclick="scrollDown()">
+    <div class="welcome-screen" id="aboutscreen">
+        <h1 class="about-h1">What we do</h1>
+                <div class="selling-point-wrapper" >
+            <div class="selling-point" onclick="scrollToNotifications()">
+                <img src="/assets/notification.png" alt="">
+                <p>Notifications</p>
+            </div>
+            <div class="selling-point" onclick="scrollToWeekly()" >
+                <img src="/assets/newspaper.png" alt="">
+                <p>Weekly News</p>
+            </div>
+            <div class="selling-point"  onclick="scrollToTipsNTricks()">
+                <img src="/assets/idea.png" alt="">
+                <p>Tips & tricks</p>
+            </div>
+    </div>
     </div>
 </section>
-    <div class="selling-point-wrapper" id="sp">
-            <div class="selling-point">
-                <img src="/assets/notification.svg" alt="">
-                <p>Notifications about changes in the market</p>
-            </div>
-            <div class="selling-point">
-                <img src="/assets/newspaper.svg" alt="">
-                <p>Weekly News about the crypto-market</p>
-            </div>
-            <div class="selling-point">
-                <img src="/assets/idea.svg" alt="">
-                <p>Tips & tricks 
-                    for investments</p>
-            </div>
-    </div>
 
-    <section class="about-hero">
-        <div class="about-hero-item">
-            <h2>How it all started</h2>
+
+    <section class="about-hero" id="sp">
+        <div class="about-hero-item" id="notif">
+            <h2>Notifications</h2>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
         </div>
         <div class="picture1">
         </div>
     </section>
     <section class="about-hero ">
-        <div class="about-hero-item item-last removethis">
-            <h2>We understood the power</h2>
+        <div class="about-hero-item item-last removethis" id="weekly">
+            <h2>Weekly News</h2>
             <p class="hero-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
         </div>
         <div class="picture2">
         </div>
     </section>
     <section class="about-hero">
-        <div class="about-hero-item ">
-            <h2>Why you should read this blog</h2>
+        <div class="about-hero-item" id="tipsntricks">
+            <h2>Tips & Tricks</h2>
             <p class="hero-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
         </div>
         <div class="picture3">
@@ -93,7 +91,7 @@
     <section class="subscribe-banner">
         <h3>Subscribe to get alerts</h3>
         <p>We provide solid tips for the crypto-market. Get alerts in time directly to Your phone. Put Your email-address in below and click "Subscribe".</p>
-        <input class="subscribe-email-input" type="text">
+        <input class="subscribe-email-input" type="text" placeholder=" Write your email here...">
         <input type="button" class="subscribe-button" value="Subscribe">
     </section>
     <footer>
@@ -117,7 +115,7 @@
         </div>
         <div class="footer-item">
             <h3>Get alerts</h3>
-            <input type="text">
+            <input type="text" placeholder=" Your e-mail here">
             <input type="button" value="Subscribe" class="footer-subscribe">
         </div>
     </footer>
