@@ -37,6 +37,7 @@ let page = 0;
 
 function createHtml (blogposts) {
 
+    
 for (i = 0; i < page+8; i++) {
     var formatDate = new Date(blogposts[i].date).toLocaleString("en-GB", {
         day: "numeric",
@@ -44,16 +45,18 @@ for (i = 0; i < page+8; i++) {
         year: "numeric",
     });
 
-    console.log(blogposts);
+
+
 
     blogpostContainer.innerHTML +=  `
     <div class="card">     
-    <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt=""></a>
+    <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"][0].alt_text}"></a>
     <div class="date">${formatDate}</div>
     <h2 class="card-h2">${blogposts[i].title.rendered}</h2>
     <div class="card-p">${blogposts[i].excerpt.rendered}</div>
     <a class="card-button" href="article.html?id=${blogposts[i].id}?_embed">Read more </a> 
     </div>`
+
 }
 
 
@@ -65,7 +68,7 @@ loadmore.addEventListener('click', ()=> {
     for (i = page; i<page+8; i++) {
         blogpostContainer.innerHTML +=  `
         <div class="card">     
-        <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt=""></a>
+        <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"][0].alt_text}"></a>
         <div class="date">${formatDate}</div>
         <h2 class="card-h2">${blogposts[i].title.rendered}</h2>
         <div class="card-p">${blogposts[i].excerpt.rendered}</div>

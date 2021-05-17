@@ -42,7 +42,7 @@ for (i = 0; i<page+4; i++) {
     latestPosts.innerHTML += 
     `
     <div class="card">     
-    <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt=""></a>
+    <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"][0].alt_text}"></a>
     <div class="date">${formatDate}</div>
     <h2 class="card-h2">${blogposts[i].title.rendered}</h2>
     <div class="card-p">${blogposts[i].excerpt.rendered}</div>
@@ -69,7 +69,7 @@ next.addEventListener('click', ()=> {
 
         latestPosts.innerHTML += `
         <div class="card">     
-        <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt=""></a>
+        <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"][0].alt_text}"></a>
         <div class="date">${formatDate}</div>
         <h2 class="card-h2">${blogposts[i].title.rendered}</h2>
         <div class="card-p">${blogposts[i].excerpt.rendered}</div>
@@ -97,7 +97,7 @@ previous.addEventListener('click', ()=> {
         });
         latestPosts.innerHTML +=  `
         <div class="card">     
-        <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt=""></a>
+        <a class="image-link" href="article.html?id=${blogposts[i].id}?_embed"><img class="card-image" src="${blogposts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"][0].alt_text}"></a>
         <div class="date">${formatDate}</div>
         <h2 class="card-h2">${blogposts[i].title.rendered}</h2>
         <div class="card-p">${blogposts[i].excerpt.rendered}</div>

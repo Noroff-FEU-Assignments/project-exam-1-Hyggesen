@@ -1,5 +1,5 @@
 const articleContainer = document.querySelector (".article-container");
-
+const metaTitle = document.querySelector("title");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
@@ -52,6 +52,13 @@ function createArticle (blogpost) {
         breadcrumb.innerHTML= `
         <a href="/index.html">Home&nbsp;</a>/&nbsp; <a href="/blogposts.html">Blogposts&nbsp;</a>/<span>&nbsp; ${blogpost.title.rendered}</span>
 `
+
+
+    metaTitle.innerHTML=`Cryptokings | ${blogpost.title.rendered}`;
+
+    document.getElementsByTagName('meta')["description"].content = `${blogpost.excerpt.rendered}`;
+
+    document.querySelector(".article-image").setAttribute("alt", `${blogpost._embedded["wp:featuredmedia"][0].alt_text}`);
 } 
 
 
