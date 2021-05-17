@@ -343,7 +343,7 @@ nav label:hover {
 
 }
 
-.subscribe-banner h3 {
+.subscribe-banner_title {
     font-size: 50px;
     font-weight: 500;
     margin: 0 auto;
@@ -1196,7 +1196,7 @@ footer input {
     }
     
 
-    .subscribe-banner h3 {
+    .subscribe-banner_title {
         font-size: 30px;
     }
 
@@ -1272,7 +1272,7 @@ footer input {
     }
 
 
-    .subscribe-banner h3 {
+    .subscribe-banner_title {
         font-size: 25px;
     }
 

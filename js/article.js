@@ -43,7 +43,7 @@ function createArticle (blogpost) {
     });
         articleContainer.innerHTML = `
         <h1 class="article-header">${blogpost.title.rendered}</h1>
-        <img class="article-image" src="${blogpost._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url}" alt="">
+        <img class="article-image" src="${blogpost._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url}">
         <div class="article-info">By:&nbsp;${blogpost._embedded.author[0].name}<span>&nbsp;${formatDate}</span></div>
         <div class="article-intro">${blogpost.excerpt.rendered}</div>
         <div class="article-text">${blogpost.content.rendered}</div>
@@ -57,7 +57,6 @@ function createArticle (blogpost) {
     metaTitle.innerHTML=`Cryptokings | ${blogpost.title.rendered}`;
 
     document.getElementsByTagName('meta')["description"].content = `${blogpost.excerpt.rendered}`;
-
     document.querySelector(".article-image").setAttribute("alt", `${blogpost._embedded["wp:featuredmedia"][0].alt_text}`);
 } 
 
