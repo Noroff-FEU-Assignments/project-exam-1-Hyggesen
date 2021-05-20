@@ -1298,6 +1298,10 @@ footer input {
 @media only screen and (max-width:480px) {
 
 
+    .previous, .next {
+        padding: 10px 10px;
+     }
+
     .caro-card {
         max-width: 210px;
     }
