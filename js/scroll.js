@@ -65,11 +65,11 @@ const rightButton = document.querySelector(".next");
 const leftButton = document.querySelector(".previous");
 
 
-
+const latest = document.querySelector(".latest-posts");
 
 
 function fixedButtons() {
-  if (window.matchMedia('(min-width: 1010px)').matches || document.body.scrollTop > 500 || document.documentElement.scrollTop > 600) {
+  if (window.matchMedia('(max-width: 1010px)').matches &&  window.scrollY > 600 && window.pageYOffset < 2000) {
 rightButton.style.display="block";
 leftButton.style.display="block";
   } else {
@@ -78,3 +78,5 @@ leftButton.style.display="block";
 
   }
 }
+
+

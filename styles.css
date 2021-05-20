@@ -246,11 +246,11 @@ nav label:hover {
  }
 
 .previous {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .next {
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -411,6 +411,7 @@ nav label:hover {
     display:flex;
     flex-direction: column;  
 }
+
 
 .featuredCard {
     margin: 0px 20px;
@@ -1296,6 +1297,7 @@ footer input {
 
 @media only screen and (max-width:480px) {
 
+
     .caro-card {
         max-width: 210px;
     }
@@ -1303,8 +1305,6 @@ footer input {
     .formitem input, .formitem textarea {
         font-size: 13px;
     }
-
-    
 
 
     .welcome-text h1::before {
@@ -1355,4 +1355,17 @@ footer input {
 
     }
 
+}
+
+
+@media only screen and (max-width:350px) {
+
+    .previous, .next {
+        padding: 5px 5px;
+     }
+
+
+     .caro-card {
+        max-width: 190px;
+    }
 }
