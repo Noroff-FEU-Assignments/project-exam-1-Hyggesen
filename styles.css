@@ -1022,10 +1022,8 @@ footer input {
     }
 
     .previous, .next {
-        position:fixed;
         z-index: 9; 
         top: 50vh;
-        display:none;
     }
 
     .next {

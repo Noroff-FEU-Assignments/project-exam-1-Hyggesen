@@ -70,11 +70,11 @@ const latest = document.querySelector(".latest-posts");
 
 function fixedButtons() {
   if (window.matchMedia('(max-width: 1010px)').matches &&  window.scrollY > 600 && window.pageYOffset < 2000) {
-rightButton.style.display="block";
-leftButton.style.display="block";
+rightButton.style.position="fixed";
+leftButton.style.position="fixed";
   } else {
-    rightButton.style.display="none";
-    leftButton.style.display="none";
+    rightButton.style.position="static";
+    leftButton.style.position="static";
 
   }
 }
