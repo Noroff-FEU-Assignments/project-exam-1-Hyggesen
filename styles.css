@@ -1296,6 +1296,10 @@ footer input {
 
 @media only screen and (max-width:480px) {
 
+    .caro-card {
+        max-width: 210px;
+    }
+
     .formitem input, .formitem textarea {
         font-size: 13px;
     }
