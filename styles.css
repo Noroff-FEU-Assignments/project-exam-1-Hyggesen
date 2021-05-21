@@ -1311,9 +1311,8 @@ footer input {
 
 
     .welcome-text h1::before {
-        height: 20px;
-        width: 5px;
-        top: 3px;
+        width: 4px;
+        top: 4px;
     }
 
     .article-header, .article-image, .back-button, .article-text, .article-intro, .article-info {
@@ -1328,17 +1327,20 @@ footer input {
         max-width: 200px;
     }
     .welcome-text h1 {
-        font-size: 20px;
+        font-size: 23px;
+        
     }
 
     @keyframes heading {
         0%   { left:0px; top:0px;}
-        50%  {left:20px; top:0px;}
+        50%  {left:10px; top:0px;}
         100% {left:0px; top:0px;}
     }
    
     .welcome-text h1 span {
-        font-size: 22px;
+        font-size: 24px;
+        margin-left: 10px;
+        line-height: 40px;
     }
 
 
