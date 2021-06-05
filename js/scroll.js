@@ -13,54 +13,6 @@ navbar.style.backgroundColor="black";
   }
 }
 
-
-function scrollDown(){
-  const section = document.getElementById('sp');
-  const navHeight = 81.2;
-  const sectionPosition = section.getBoundingClientRect().top;
-  const finalScrollPosition = sectionPosition - navHeight;
-
-  window.scrollTo({
-       top: finalScrollPosition,
-  });
-}
-
-
-
-function scrollToNotifications(){
-  const section = document.getElementById('notif');
-  const navHeight = 81.2;
-  const sectionPosition = section.getBoundingClientRect().top;
-  const finalScrollPosition = sectionPosition - navHeight;
-
-  window.scrollTo({
-       top: finalScrollPosition,
-  });
-}
-
-function scrollToWeekly(){
-  const section = document.getElementById('weekly');
-  const navHeight = 81.2;
-  const sectionPosition = section.getBoundingClientRect().top;
-  const finalScrollPosition = sectionPosition - navHeight;
-
-  window.scrollTo({
-       top: finalScrollPosition,
-  });
-}
-
-function scrollToTipsNTricks(){
-  const section = document.getElementById('tipsntricks');
-  const navHeight = 81.2;
-  const sectionPosition = section.getBoundingClientRect().top;
-  const finalScrollPosition = sectionPosition - navHeight;
-
-  window.scrollTo({
-       top: finalScrollPosition,
-  });
-}
-
-
 const rightButton = document.querySelector(".next");
 const leftButton = document.querySelector(".previous");
 

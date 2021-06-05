@@ -50,18 +50,23 @@
             <div class="welcome-screen" id="aboutscreen">
                 <h1 class="about-h1">What we do</h1>
                 <div class="selling-point-wrapper">
-                    <div class="selling-point" onclick="scrollToNotifications()">
-                        <img src="/assets/notification.png" alt="a yellow notification bell" />
-                        <p>Notifications</p>
-                    </div>
-                    <div class="selling-point" onclick="scrollToWeekly()">
-                        <img src="/assets/newspaper.png" alt="a yellow newspaper icon" />
-                        <p>Weekly News</p>
-                    </div>
-                    <div class="selling-point" onclick="scrollToTipsNTricks()">
-                        <img src="/assets/idea.png" alt="a yellow lightbulb icon" />
-                        <p>Tips & tricks</p>
-                    </div>
+
+                    <a href="#notif">
+                        <div class="selling-point">
+                            <img src="/assets/notification.png" alt="a yellow notification bell" />
+                            <p>Notifications</p>
+                        </div>
+                    </a>
+                <a href="#weekly"><div class="selling-point">
+                    <img src="/assets/newspaper.png" alt="a yellow newspaper icon" />
+                    <p>Weekly News</p>
+                </div></a>
+
+                <a href="#tipsntricks"><div class="selling-point">
+                    <img src="/assets/idea.png" alt="a yellow lightbulb icon" />
+                    <p>Tips & tricks</p>
+                </div></a>
+
                 </div>
             </div>
         </section>
@@ -91,8 +96,12 @@
         <section class="subscribe-banner">
             <h3 class="subscribe-banner_title">Subscribe to get alerts</h3>
             <p>We provide solid tips for the crypto-market. Get alerts in time directly to Your phone. Put Your email-address in below and click "Subscribe".</p>
-            <input class="subscribe-email-input" type="text" placeholder=" Write your email here..." />
-            <input type="button" class="subscribe-button" value="Subscribe" />
+            <form id="subform"> 
+                <input id="subinput" class="subscribe-email-input" type="text" placeholder=" Write your email here..." />
+                <div class="form-error" id="subscribeError">* Please enter a valid email-address</div>
+                <div class="form-success" id="subscribeSuccess">Subscribed! Welcome to the community!</div>
+                <button class="subscribe-button">Subscribe</button>
+            </form>
         </section>
         <footer>
             <div class="logo footer-logo">
@@ -124,6 +133,6 @@
             </div>
         </footer>
         <script src="js/scroll.js"></script>
-        <script src="js/itemorder.js"></script>
+        <script src="js/validateSubscriptions.js"></script>
     </body>
 </html>
