@@ -25,6 +25,10 @@ body {
     --margin-standard: 0px 20px 0px 20px;
 }
 
+.break {
+    display:block;
+}
+
 main {
     top: 81.2px;
     position: relative;
@@ -35,11 +39,11 @@ main {
     overflow: hidden;
 }
 
-#active {
+#active-about, #active-article,  #active-contact, #active-home, #active-blogposts, #active{
     color: var(--main-color);
 }
 
-#blogpost-active {
+#active-blogposts-top {
     color: var(--main-color);
     background: none;
     font-weight: 500;
@@ -85,8 +89,8 @@ main {
 }
 
 .loader {
-    border: 15px solid white; /* Light grey */
-    border-top: 15px solid var(--main-color); /* Blue */
+    border: 15px solid white; 
+    border-top: 15px solid var(--main-color); 
     border-radius: 50%;
     width: 100px;
     height: 100px;

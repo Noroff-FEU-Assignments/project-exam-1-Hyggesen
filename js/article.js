@@ -65,16 +65,27 @@ function createArticle (blogpost) {
 
 
 
-document.querySelector(".modal").addEventListener('click', closeModal);
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modal-content")
+
+
+document.addEventListener('click', function(event) {
+  var insideClick = modalContent.contains(event.target);
+  var outsideClick = modal.contains(event.target);
+  if (!insideClick && outsideClick) {
+    document.querySelector(".modal").classList.add('hidden');
+  }
+  else {
+  
+  }
+});
+
 
 function openModal () {
     document.querySelector(".modal").classList.remove('hidden');
 }
 
 
-function closeModal(){
-    document.querySelector(".modal").classList.add('hidden');
-}
 
 
 function addModalImage(blogpost) {
@@ -83,6 +94,3 @@ function addModalImage(blogpost) {
     `;
 
 }
-
-
-closeModal();
